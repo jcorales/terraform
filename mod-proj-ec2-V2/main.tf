@@ -51,6 +51,7 @@ module "ec2-3"    {
     source = "./ec2"
     ec2type = "t2.micro"
     ec2iface = module.vpc.ec2_network_interface-3
+    
     ec2name = "instance3"
     user_data = <<-EOF
 	        #!/bin/bash
