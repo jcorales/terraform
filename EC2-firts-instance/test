@@ -1,0 +1,1000 @@
+  158  echo \\
+  159  IFS=','
+  160  read a b c d
+  161  echo $a
+  162  echo $b
+  163  echo $c
+  164  echo $d
+  165  ifcong¿fig
+  166  ifconfig 
+  167  sudo su 
+  168  rdesktop pterminalp09
+  169  rdesktop pterminalp10
+  170  cd Downloads/
+  171  ls
+  172  tar xvf linuxx64-21.1.0.14.tar.gz 
+  173  cd linuxx64/
+  174  ls
+  175  cd linuxx64.cor/
+  176  ls
+  177  sudo apt-cache search ica
+  178  sudo apt-cache search citrix
+  179  sudo apt-cache search icaclient
+  180  apt-get install Icaclient
+  181  sudo apt-get install Icaclient
+  182  ls
+  183  ./selfservice cd ..
+  184  cd ..
+  185  rm -rf linuxx64*
+  186  sudo dpkg -i icaclient_20.9.0.15_amd64.deb
+  187  ls
+  188  ls -lha 
+  189  sudo dpkg -i icaclient_21.3.0.38_amd64.deb 
+  190  cd 
+  191  cd /opt/Citrix/ICAClient/keystore/cacerts
+  192  ls
+  193  sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+  194  history 
+  195  sudo su
+  196  cd Downloads/anyconnect-linux64-4.9.01095/vpn/
+  197  ls
+  198  sudo ./vpn_install.sh 
+  199  ls
+  200  firefox 
+  201  sudo reboot
+  202  ps fax 
+  203  ps fax | fiirefox
+  204  ps fax | firefox
+  205  ps -fe 
+  206  ps -fe | firefox
+  207  ping 8.8.8.8
+  208  ping google.com.ar
+  209  sudo su 
+  210  history 
+  211  cd /usr/share/ca-certificates/mozilla/
+  212  ls
+  213  ls -lha 
+  214  ls -ltra 
+  215  ps -fax | grep firefox
+  216  kill -9 4655
+  217  firefox 
+  218  sudo firefox 
+  219  apt-get remove firefox
+  220  sudo apt-get remove firefox
+  221  history 
+  222  ls /usr/share/ca-certificates/mozilla/
+  223  sudo apt-get install firefox
+  224  history 
+  225  ls /usr/share/ca-certificates/mozilla/
+  226  ls /opt/Citrix/ICAClient/keystore/cacerts
+  227  cd /opt/Citrix/ICAClient/keystore/cacerts
+  228  sudo find -type l -delete
+  229  killall firefox
+  230  ls
+  231  ls /opt/Citrix/ICAClient/keystore/cacerts
+  232  sudo su
+  233  sudo apt install firefox
+  234  sudo apt purge firefox
+  235  ls /opt/Citrix/ICAClient/keystore/cacerts
+  236  ls /usr/share/ca-certificates/mozilla/
+  237  cd /usr/share/ca-certificates/mozilla/
+  238  cd /usr/share/ca-certificates/
+  239  ls
+  240  cd ~
+  241  ls
+  242  cd ~/Downloads/
+  243  ls
+  244  history 
+  245  sudo dpkg -r icaclient_21.3.0.38_amd64.deb 
+  246  dpkg -l | grep ica
+  247  dpkg -l | grep icaclient_21.3.0.38_amd64.deb 
+  248  dpkg -l | grep icaclient
+  249  sudo dpkg -r icaclient
+  250  sudo dpkg -i icaclient_21.3.0.38_amd64.deb 
+  251  sudo apt-get install locate 
+  252  locate chrome
+  253  cd 
+  254  locate chrome
+  255  find / chrome
+  256  sudo su
+  257  sudo apt install firefox
+  258  sudo cd /usr/share/ca-certificates/
+  259  ls
+  260  mv mozilla/ mozilla-backup
+  261  sudo mv mozilla/ mozilla-backup
+  262  ls
+  263  sudo reboot 
+  264  cd /usr/share/ca-certificates/mozilla/
+  265  cd /usr/share/ca-certificates/
+  266  ls
+  267  sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+  268  ls
+  269  cp mozilla-backup/ mozilla
+  270  ls
+  271  cp -R mozilla-backup/ mozilla
+  272  sudo cp -R mozilla-backup/ mozilla
+  273  ls
+  274  sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+  275  ls
+  276  sudo apt-get install xscreensaver xscreensaver-gl-extra xscreensaver-data-extra
+  277  sudo apt-get install gnome-screensaver
+  278  gnome-screensaver
+  279  sudo apt-get remove gnome-screensaver
+  280  xscreensaver -nosplash
+  281  xscreensaver-command -activate
+  282  ~/Downloads/
+  283  cd ~/Downloads/
+  284  ls -ltra 
+  285  sudo dpkg -i anydesk_6.1.0-1_amd64.deb 
+  286  apt get install libgtkglext1
+  287  apt  install libgtkglext1
+  288  sudo apt  install libgtkglext1
+  289  sudo apt --fix-broken install
+  290  sudo dpkg -i anydesk_6.1.0-1_amd64.deb 
+  291  cd Downloads/
+  292  ls -ltra 
+  293  dpkg -i teams_1.4.00.7556_amd64.deb 
+  294  sudo dpkg -i teams_1.4.00.7556_amd64.deb 
+  295  sudo su
+  296  ssh -l s93729 PTTIBWSC01
+  297  ssh -l as93729 PTTIBWSC01
+  298  ssh -l s93729 PTTIBWSC01
+  299  ssh -l s93729 PATLALNXP42
+  300  ssh -l as93729 PTTIBWSC01
+  301  ssh -l as93729 PTTIBMWC03
+  302  ssh -l as93729 PTTIBMWC02
+  303  ssh -l as93729 PTTIBWSC02
+  304  ssh -l as93729 PTTIBWSC01
+  305  ssh -l as93729 PTTIBAPC01
+  306  ssh -l as93729 PTTIBAPC02
+  307  ssh -l as93729 PTTIBSOC01
+  308  ssh -l as93729 PFILETTIBC01
+  309  rdesktop PTTIBSOC01
+  310  ssh -l as93729 PTTIBSOD03
+  311  ssh -l as93729 PTTIBSOD02
+  312  ssh -l as93729 PTTIBSOD01
+  313  ssh -l as93729 PTTIBMWD01
+  314  ssh -l as93729 PFILETTIBD01
+  315  ssh -l as93729 PTTIBSOD04
+  316  ssh -p 4422 d24442e8a867df7df0f278580ef01cfe69619cfcd2f87de8e55ade9dec3a53a7@pamacceso.lima.bcp.com.pe
+  317  ssh -l as93729 PTTIBMWP02
+  318  cd /home/
+  319  ls
+  320  mkdir android 
+  321  pwd
+  322  cd acorales/
+  323  mkdir android 
+  324  cd android/
+  325  df -h
+  326  cd /x-special/nautilus-clipboard
+  327  cut
+  328  mtp://HUAWEI_SNE-LX3_NWB0219504001958/Memoria%20interna/WhatsApp/Media/WhatsApp%20Images
+  329  cd /snap/gtk-common-themes/1514
+  330  ls
+  331  cd ..
+  332  df -h
+  333  cd /snap/spotify/
+  334  du -sh
+  335  cd 46/
+  336  ls
+  337  df -h
+  338  pwd
+  339  ls
+  340  mkdir Pasaje
+  341  cd Pasaje/
+  342  mkdir AWS
+  343  cd AWS/
+  344  ls
+  345  cd CLOUDFORMATION-AWS/
+  346  cd ..
+  347  mv CLOUDFORMATION-AWS/ CLOUDFORMATION
+  348  cd CLOUDFORMATION/
+  349  ls
+  350  mv CloudFormation-Abel/ cft
+  351  ls
+  352  apt-add-repository ppa:jtaylor/keepass
+  353  sudo apt-add-repository ppa:jtaylor/keepass
+  354  sudo apt-get install keepass2 -y
+  355  cwd
+  356  killall firefox
+  357  rdesktop P09DC12345LPT01
+  358  rdesktop pterminal
+  359  rdesktop pterminalp09
+  360  rdesktop pterminalp09 -V
+  361  killall zoom
+  362  ifconfig 
+  363  hostid 
+  364  cat /etc/hostid 
+  365  cat /etc/host.conf 
+  366  sudo su
+  367  pwd
+  368  cd Pasaje/
+  369  ls
+  370  cd software/
+  371  ls
+  372  tar xvf spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-linux.gtk.x86_64.tar.gz 
+  373  ls
+  374  cd sts-4.10.0.RELEASE/
+  375  ls
+  376  cd ..
+  377  mv sts-4.10.0.RELEASE/ SpringToolSuite
+  378  ls
+  379  sudo mv SpringToolSuite /opt/
+  380  sudo gedit /usr/share/Spring.desktop
+  381  sudo apt install openjdk-8-jdk
+  382  sudo gedit /etc/bash.bashrc
+  383  source /etc/bash.bashrc
+  384  echo $JAVA_HOME
+  385  sudo gedit /usr/share/applications/Spring.desktop
+  386  vim /usr/share/applications/Spring.desktop
+  387  sudo vim /usr/share/applications/Spring.desktop
+  388  /usr/share/applications/Spring.desktop
+  389  sudo /usr/share/applications/Spring.desktop
+  390  ls /opt/SpringToolSuite
+  391  ls
+  392  tar xvf spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-linux.gtk.x86_64.tar.gz 
+  393  sudo su
+  394  cd ../../Documents/
+  395  ls
+  396  ls -ltra 
+  397  cd workspace-spring-tool-suite-4-4.10.0.RELEASE/
+  398  ls
+  399  cd ccdemo/
+  400  ls
+  401  pwd
+  402  ls
+  403  LS
+  404  ls
+  405  cd src/
+  406  ls
+  407  cd main/
+  408  ls
+  409  cd java/
+  410  ls
+  411  cd com/
+  412  ls
+  413  cd stacksimplify/
+  414  ls
+  415  cd ccdemo/
+  416  ls
+  417  pwd
+  418  cd
+  419  java --version
+  420  java --v
+  421  java -v
+  422  java -version
+  423  sudo su
+  424  ls
+  425  cd Documents/
+  426  ls
+  427  pwd
+  428  ls
+  429  cd workspace-spring-tool-suite-4-4.10.0.RELEASE/
+  430  ls
+  431  rm -rf *
+  432  pwd
+  433  ls
+  434  cd Pasaje/
+  435  ls
+  436  cd AWS/
+  437  ls
+  438  cd CLOUDFORMATION/
+  439  ls
+  440  cd cft-abel/
+  441  ls
+  442  cd ec2-ohio/
+  443  clear
+  444  ls
+  445  cat ccdemo-app.pem 
+  446  chmod 400 ccdemo-app.pem
+  447  ssh -i "ccdemo-app.pem" ec2-user@172.31.5.90ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  448  ls
+  449  chmod 400 ccdemo-app.pem
+  450  clear
+  451  ssh -i "ccdemo-app.pem" ec2-user@172.31.5.90ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  452  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  453  exit
+  454  sudo su 
+  455  ifconfig 
+  456  exit
+  457  pwd
+  458  cd Pasaje/
+  459  ls
+  460  cd AWS/CLOUDFORMATION/
+  461  ls
+  462  cd cft-abel/
+  463  ls
+  464  cd ec2-ohio/
+  465  ls
+  466  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  467  vim     - 'appspec.yml'
+  468  clear
+  469  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  470  vi /home/acorales/.ssh/known_hosts
+  471  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  472  vi /home/acorales/.ssh/known_hosts
+  473  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-128-203-101.us-east-2.compute.amazonaws.com
+  474  clear
+  475  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-135-215-8.us-east-2.compute.amazonaws.com
+  476  java --version
+  477  java -version
+  478  sudo yum install java-11-amazon-corretto
+  479  clear
+  480  ssh -i "ccdemo-app.pem" root@ec2-3-135-190-161.us-east-2.compute.amazonaws.com
+  481  ls
+  482  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-135-190-161.us-east-2.compute.amazonaws.com
+  483  cd Pasaje/
+  484  cd AWS/
+  485  cd CLOUDFORMATION/
+  486  ls
+  487  cd cft-abel/
+  488  cd ec2-ohio/
+  489  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-129-70-245.us-east-2.compute.amazonaws.com
+  490  cd Pasaje/AWS/CLOUDFORMATION/cft-abel/ec2-ohio/
+  491  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-129-70-245.us-east-2.compute.amazonaws.com
+  492  pwd
+  493  cd Pasaje/AWS/CLOUDFORMATION/cft-abel/ec2-ohio/
+  494  clear
+  495  ssh -i "ccdemo-app.pem" user-ec2@ec2-18-221-168-85.us-east-2.compute.amazonaws.com
+  496  ls
+  497  ssh -i "ccdemo-app.pem" root@ec2-18-221-168-85.us-east-2.compute.amazonaws.com
+  498  ssh -i "ccdemo-app.pem" ec2-user@ec2-18-221-168-85.us-east-2.compute.amazonaws.com
+  499  ssh -i "ccdemo-app.pem" user-ec2@ec2-18-222-89-44.us-east-2.compute.amazonaws.com
+  500  ssh -i "ccdemo-app.pem" ec2-user@ec2-18-222-89-44.us-east-2.compute.amazonaws.com
+  501  cd Pasaje/AWS/CLOUDFORMATION/cft-abel/ec2-ohio/
+  502  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-141-192-231.us-east-2.compute.amazonaws.com
+  503  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-138-36-193.us-east-2.compute.amazonaws.com
+  504  df -h
+  505  cd /
+  506  fdisk -l
+  507  clear
+  508  df -h
+  509  du -sh
+  510  sudo su
+  511  sudo su 
+  512  cd vpcrepo
+  513  ls
+  514  git status
+  515  clear
+  516  history 
+  517  git remote add master git@gitlab.com:/git-codecommit.us-east-2.amazonaws.com/v1/repos/vpcrepo
+  518  git remote add master git@gitlab.com:/git-codecommit.us-east-2.amazonaws.com4789+/9/+
+  519  git remote add morigin git@gitlab.com:/git-codecommit.us-east-2.amazonaws.com/v1/repos/vpcrepo+/
+  520  cd ..
+  521  ls
+  522  sudo su
+  523  git config --global user.email "abel.corales@gmail.com"
+  524  git config --global user.name "acorales"
+  525  git clone https://git-codecommit.us-east-2.amazonaws.com/v1/repos/vpcrepo
+  526  ls -ltra 
+  527  rm -rf vpcrepo/
+  528  sudo su rm -rf vpcrepo/
+  529  sudo rm -rf vpcrepo/
+  530  clear
+  531  git clone https://git-codecommit.us-east-2.amazonaws.com/v1/repos/vpcrepo
+  532  git config --global user.email "abel.corales@gmail.com"
+  533  git config --global user.name "acorales"
+  534  git clone https://git-codecommit.us-east-2.amazonaws.com/v1/repos/vpcrepo
+  535  git status
+  536  ssh -l s93729@pttibmwc02
+  537  ssh -l s93729 pttibmwc02
+  538  ssh -l as93729 pttibmwc02
+  539  ping pttibmwc02
+  540  ssh -l s93729 pttibmwc02
+  541  ssh -l s93729 pttibmwc01
+  542  ssh -l s93729 pttibmwc03
+  543  ssh -l s93729 pttibwsc02
+  544  ssh -l as93729 pttibwsc02
+  545  ssh -l as93729 pshcllnxc01
+  546  ssh -l as93729 peditran5c01
+  547  clear
+  548  ssh -l s93729 pttibwsc02
+  549  ssh -l s93729 pttibwsc03
+  550  ssh -l s93729 pttibwsc02
+  551  ssh -l s93729 pttibmwc02
+  552  ssh -l as93729 pttibmwc02
+  553  ssh -l as93729 pttibmwc03
+  554  killall firefox
+  555  ssh -l as93729 pttibapc01
+  556  ssh -l as93729 pttibapc02
+  557  ssh -l as93729 pttibapc01
+  558  ls 
+  559  cat vpc.yml 
+  560  cat vpc-config.json 
+  561  pwd
+  562  cd git/vpcrepo
+  563  ls
+  564  ls -lha 
+  565  cd ..
+  566  ls
+  567  cd Pasaje/
+  568  ls
+  569  cd AWS/
+  570  ls
+  571  cd CLOUDFORMATION/
+  572  ls
+  573  cd cft-abel/CFN-Code-v3/
+  574  ls
+  575  cd 15-Infrastructure-As-Code/
+  576  ls
+  577  ll
+  578  clear
+  579  ls 
+  580  cd 15-00-vpcrepo/Updated-VPC/
+  581  ls
+  582  cp * /home/acorales/git/vpcrepo/
+  583  pwd
+  584  cd /home/acorales/
+  585  cd git/
+  586  ls
+  587  cd repository/
+  588  ls
+  589  cleAR
+  590  clear
+  591  git config --global user.email "abel.corales@gmail.com"
+  592  git config --global user.name "acorales"
+  593  git clone https://git-codecommit.us-east-2.amazonaws.com/v1/repos/vpcrepo
+  594  ls
+  595  cd vpcrepo/
+  596  ls
+  597  git status 
+  598  git checkout master
+  599  git status 
+  600  ls
+  601  cp /home/acorales/Pasaje/AWS/CLOUDFORMATION/cft-abel/CFN-Code-v3/15-Infrastructure-As-Code/15-00-vpcrepo/Updated-VPC/* .
+  602  ls -lha 
+  603  git status
+  604  git commit -m "add vpc subnet new"
+  605  git status
+  606  git push
+  607  git push all
+  608  git push .
+  609  git status
+  610  git add vpc-config.json
+  611  git add vpc.yml
+  612  touch test
+  613  ls
+  614  git status
+  615  git add test 
+  616  git status
+  617  git commit -m "add vpc subnet new file"
+  618  git status
+  619  git push 
+  620  ls
+  621  cat buildspec.yml 
+  622  ls
+  623  cd ..
+  624  ls
+  625  cd ..
+  626  ls
+  627  ls -l
+  628  cd ..
+  629  ls
+  630  ln -s /home/acorales/git/ /home/acorales/
+  631  ln -s /home/acorales/git/ /home/acorales/Desktop/
+  632  ls
+  633  cd Pasaje/
+  634  ls
+  635  cd AWS/
+  636  ls
+  637  cd CLOUDFORMATION/
+  638  ls
+  639  cd cft-abel/
+  640  ls
+  641  cd ccdemo-cb1\ \(1\)/
+  642  ls
+  643  cd ..
+  644  ls
+  645  cd ec2-ohio/
+  646  ls
+  647  killall firefox
+  648  cd
+  649  cd /
+  650  ls
+  651  cd VM/
+  652  ls
+  653  cd ..
+  654  killall firefox
+  655  ping 8.8.8.8
+  656  clear
+  657  ping 8.8.8.8
+  658  file=image.png
+  659  echo $file
+  660  echo ${file%.*}
+  661  echo ${file#*.}
+  662  var=lots.of.words.separated.by.periods
+  663  echo $var
+  664  echo ${var%.*}
+  665  echo ${image#*.}
+  666  echo ${image%*.}
+  667  echo ${file%.*}
+  668  echo ${var%.*}
+  669  echo ${var#*.}
+  670  echo ${var%.*}
+  671  echo ${var%%.*}
+  672  CLEAR
+  673  clear
+  674  var="This is a very long string variable"
+  675  echo $var
+  676  echo ${var:5}
+  677  echo ${var:4}
+  678  echo ${var:1}
+  679  echo ${var:2}
+  680  echo ${var:3}
+  681  echo ${var:4}
+  682  echo ${var: -5}
+  683  echo $((num-10))
+  684  num=5
+  685  echo $((num-10))
+  686  echo ${var:((num-10))}
+  687  echo ${var:$num:((num+3))}
+  688  mynumber=5
+  689  myphone="555-1749"
+  690  echo ${!my*}
+  691  clear
+  692  myarray[0]="Zeroeth Element"
+  693  myarray[3]="Third Element"
+  694  myarray[5]="Fifth Element"
+  695  echo ${#myarray[*]}
+  696  echo ${myarray[*]}
+  697  echo ${myarray[5]}
+  698  echo ${myarray[*]}
+  699  echo ${myarray[1]}
+  700  echo ${myarray[2]}
+  701  echo ${myarray[*]}
+  702  echo ${myarray[0]}
+  703  echo ${myarray[3]}
+  704  echo ${myarray[5]}
+  705  clear
+  706  read
+  707  echo $REPLY
+  708  read -a vars
+  709  echo ${vars[1]}
+  710  echo ${#vars[*]}
+  711  echo ${vars[2]}
+  712  clear
+  713  read -p  "Username> "
+  714  echo $REPLY
+  715  read -p "Password: " -s pwd
+  716  echo $pwd
+  717  read -t 30 || echo "Timeout"
+  718  read -t 30 || echo  "Timeout"
+  719  read -n 5
+  720  cters
+  721  echo $REPLY
+  722  read -t 10 || echo  "Timeout"
+  723  read -n 5
+  724  read -n 5 -t 5 || echo "Timeout"
+  725  clear
+  726  function fibonacci {  iterations=$1; start=1; last=1; while (( iterations-- > 0 )); do new=$((last + start)); echo $last + $start = $new; start=$last; last=$new; done; }
+  727  fibonacci 3 
+  728  fibonacci 2
+  729  fibonacci 1
+  730  fibonacci 0
+  731  fibonacci 4
+  732  fibonacci 10
+  733  ls
+  734  cd Pasaje/
+  735  ls
+  736  mkdir Shell-scripting
+  737  cd Shell-scripting/
+  738  vim exit.sh
+  739  cleat
+  740  clear
+  741  chmod a+x exit.sh 
+  742  ./exit.sh 
+  743  vim exit.sh
+  744  startup
+  745  process_file > /tmp/myfile || exit
+  746  process_file > /tmp/myfile 
+  747  cd Pasaje/
+  748  cd Shell-scripting/
+  749  ls
+  750  process_file > /tmp/myfile 
+  751  ./exit.sh 
+  752  bash -xe ./exit.sh 
+  753  bash -x ./exit.sh 
+  754  clear
+  755  var="Twas brillig, and the slithy tove"
+  756  echo "${var#*,}" 
+  757  a="a,b,c,d,e"
+  758  echo ${a%,*}
+  759  echo ${a%%,*}
+  760  slist=${#surnames[*]}
+  761  surnames=acorales
+  762  slist=${#surnames[*]}
+  763  echo $surnames 
+  764  echo $slist 
+  765  slist=${#surnames[*]}
+  766  echo $slist 
+  767  read -a args
+  768  a="a,b,c,d,e"
+  769  echo ${a%,*}
+  770  echo ${a%%,*}
+  771  read -a args
+  772  echo $REPLY
+  773  history 
+  774  read help
+  775  help read
+  776  cat exit.sh 
+  777  ifconfig 
+  778  ps 
+  779  clear
+  780  tr '\0' '\n' < /proc/1830/environ
+  781  ps
+  782  ls -l /proc/
+  783  clear
+  784  ps
+  785  ls -l /proc/9551/
+  786  tr '\0' '\n' < /proc/9551/environ 
+  787  tr '\0' '\n' < /proc/9551/fd
+  788  ls -l /proc/9551/fd
+  789  ls -l /proc/*/fd | grep /home
+  790  sudo su
+  791  ifconfig
+  792  sudo poweroff 
+  793  sudo apt-get install gtk-recordmydesktop
+  794  sudo apt-get install recordmydesktop gtk-recordmydesktop
+  795  wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-5.1ubuntu2_amd64.deb
+  796  wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gtk-recordmydesktop/gtk-recordmydesktop_0.3.8-4.1ubuntu1_all.deb
+  797  sudo apt-get install ./python-gtk2_2.24.0-5.1ubuntu2_amd64.deb ./gtk-recordmydesktop_0.3.8-4.1ubuntu1_all.deb
+  798  killall recordmydesktop 
+  799  ps fax 
+  800  ps fax | record 
+  801  sudo apt install vokoscreen
+  802  killall recordmydesktop 
+  803  killall firefox 
+  804  killall teams 
+  805  killall cisco
+  806  sudo poweroff 
+  807  ipconfig
+  808  ifconfig 
+  809  killall firefox
+  810  rdesktop pterminalp10
+  811  exit
+  812  sudo su
+  813  sudo mkdir -p /var/sftp/myfolder/data/
+  814  sudo chown root:root /var/sftp/myfolder
+  815  sudo chmod 755 /var/sftp/myfolder
+  816  sudo chown sftp_user:sftp_user /var/sftp/myfolder/data/
+  817  sudo vi /etc/ssh/sshd_config
+  818  sudo systemctl restart sshd
+  819  journalctl -xe
+  820  sudo su
+  821  sudo vi /etc/ssh/sshd_config
+  822  sudo systemctl restart sshd
+  823  systemctl status ssh
+  824  apt-get install openssh-server
+  825  sudo su
+  826  sftp sftpuser@localhost
+  827  sudo su
+  828  pwd
+  829  cat http-apache.pem
+  830  cat http-apache.pem.pub 
+  831  sudo snap install snowflake
+  832  pwd
+  833  ls
+  834  sudo su
+  835  clear
+  836  ssh -i "http-apache.pem" ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com
+  837  sftp -l ec2-user ec2-18-222-182-251.us-east-2.compute.amazonaws.com 
+  838  sudo su
+  839  sftp  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com 
+  840  ls
+  841  cd Pasaje/
+  842  ls
+  843  cd AWS/
+  844  ls
+  845  cd CLOUDFORMATION/
+  846  ls
+  847  cd Udemy/
+  848  ls
+  849  cd AWS-CloudFormation-v1-orig/
+  850  ls
+  851  cd CFN-Code-v3/
+  852  ls
+  853  cd ..
+  854  ls
+  855  cd ..
+  856  ls
+  857  cd key-aws/
+  858  ls
+  859  sftp  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com -i http-apache.pem 
+  860  help sftp
+  861  man sftp
+  862  sftp -i http-apache.pem  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com 
+  863  chmod 0644 http-apache.pem 
+  864  sftp -i http-apache.pem  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com 
+  865  chmod 400 http-apache.pem
+  866  sftp -i http-apache.pem  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com 
+  867  pwd
+  868  sftp  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com -i http-apache.pem 
+  869  sftp  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com -i /home/acorales/Pasaje/key-aws/http-apache.pem 
+  870  sftp -i http-apache.pem  ec2-user@ec2-18-222-182-251.us-east-2.compute.amazonaws.com 
+  871  ls
+  872  cd ..
+  873  ls
+  874  cd ..
+  875  sudo chmod 777 -R Pasaje/
+  876  ls -lha Pasaje/
+  877  ls -lha Pasaje
+  878  ls -ltra 
+  879  pwd
+  880  ls
+  881  sudo chmod 755 -R Pasaje/
+  882  ls -ltra 
+  883  mv Pasaje/ pasaje
+  884  cd pasaje/
+  885  ls
+  886  cd ..
+  887  ls
+  888  mkdir Pasaje
+  889  cd pasaje/
+  890  cp -R * ../Pasaje/
+  891  df -h
+  892  ls
+  893  cd ../Pasaje/
+  894  ls
+  895  cd AWS/
+  896  ls
+  897  ls -ltra
+  898  cd ..
+  899  chmod 777 -R AWS/
+  900  ls
+  901  cd ..
+  902  rm -rf Pasaje/
+  903  mv pasaje/ Personal
+  904  cd Personal/
+  905  cd ..
+  906  ls -ltra
+  907  ls -lha Personal/ Dropbox/
+  908  cd Personal/
+  909  ls
+  910  cd ..
+  911  mv Personal/ Pasaje
+  912  cd Pasaje/
+  913  ls
+  914  cd key-aws/
+  915  pwd
+  916  cd ..
+  917  mv key-aws/ ../
+  918  cd ..
+  919  ls
+  920  cd Pasaje/
+  921  ls
+  922  cd AWS/
+  923  ls
+  924  cd CLOUDFORMATION/
+  925  ñs
+  926  history 
+  927  cd ..
+  928  ls
+  929  cd ..
+  930  ls
+  931  cd ..
+  932  ls
+  933  cd key-aws/
+  934  ssh -i "http-apache.pem" ec2-user@ec2-3-133-134-151.us-east-2.compute.amazonaws.com
+  935  sudo chmod 400 http-apache.pem
+  936  ssh -i "http-apache.pem" ec2-user@ec2-3-133-134-151.us-east-2.compute.amazonaws.com
+  937  killall firefox
+  938  killall mozilla
+  939  killall firefox
+  940  sudo su 
+  941  killall firefox
+  942  ps fax | grep firefox
+  943  kill -9 4872
+  944  history 
+  945  pwd
+  946  cd Pasaje/AWS/CLOUDFORMATION/Proyects\ Abel/key/ohio/
+  947  ssh -i "http-apache.pem" ec2-user@ec2-3-133-134-151.us-east-2.compute.amaz
+  948  cleR
+  949  clear
+  950  ssh -i "http-apache.pem" ec2-user@ec2-18-117-142-153.us-east-2.compute.amazonaws.com
+  951  ls
+  952  chmod 400 http-apache.pem
+  953  ssh -i "http-apache.pem" ec2-user@ec2-18-117-142-153.us-east-2.compute.amazonaws.com
+  954  killall mozilla
+  955  killall firefox
+  956  ps fax | fire
+  957  ps fax | grep fire
+  958  kill -9 LM210518517
+  959  kill -9 3161
+  960  killall firefox
+  961  ps fax | grep fire
+  962  kill -9 6231
+  963  kill -9 6574
+  964  kill -9 6401
+  965  kill -9 6208
+  966  kill -9 6148
+  967  firefox 
+  968  sudo su
+  969  sudo apt update
+  970  asudo apt update
+  971  apt list --upgradable
+  972  asudo apt update
+  973  sudo apt update
+  974  sudo apt install gimp
+  975  sudo apt-get install dos2unix
+  976  cd Desktop/
+  977  cd boto3/
+  978  ls 
+  979  vim start_stop_terminate_all_instances_at_once.py 
+  980  dos2unix *
+  981  vim start_stop_terminate_all_instances_at_once.py 
+  982  cd Pasaje/AWS/CLOUDFORMATION/Proyects\ Abel/key/ohio/
+  983  LS
+  984  ls
+  985  cp http-apache.pem /home/acorales/
+  986  cd /home/acorales/
+  987  ls
+  988  mkdir key-aws
+  989  ls key-aws/
+  990  cd key-aws/
+  991  ls
+  992  ssh -i "http-apache.pem" ec2-user@ec2-18-119-115-198.us-east-2.compute.amazonaws.com
+  993  ssh -i "http-apache.pem" ec2-user@ec2-3-133-108-250.us-east-2.compute.amazonaws.com
+  994  cd Desktop/
+  995  ls
+  996  cd boto3/
+  997  history 
+  998  dos2unix *
+  999  sudo su
+ 1000  cd key-aws/
+ 1001  ls
+ 1002  ssh -i "http-apache.pem" ec2-user@ec2-18-118-28-172.us-east-2.compute.amazonaws.com
+ 1003  ifconfig 
+ 1004  killall firwfox
+ 1005  killall firefox
+ 1006  ps -fax 
+ 1007  kill -0 3340
+ 1008  ps -fax | grep firefox
+ 1009  kill -0 3252
+ 1010  kill -9 3240
+ 1011  kill -9 3252
+ 1012  pwd
+ 1013  ls
+ 1014  cd key-aws/
+ 1015  ssh -i "http-apache.pem" ec2-user@ec2-3-133-125-224.us-east-2.compute.amazonaws.com
+ 1016  ls
+ 1017  ssh -i "ccdemo-app.pem" root@ec2-3-137-172-57.us-east-2.compute.amazonaws.com
+ 1018  cd ..
+ 1019  cd Pasaje/
+ 1020  ls
+ 1021  cd AWS/
+ 1022  ls
+ 1023  cd CLOUDFORMATION/
+ 1024  ls
+ 1025  cd Udemy/
+ 1026  ls
+ 1027  cd AWS-CloudFormation-v1-orig/
+ 1028  ls
+ 1029  cd CFN-Code-v3/
+ 1030  ls
+ 1031  cd ..
+ 1032  ls
+ 1033  cd ..
+ 1034  ls
+ 1035  cd Proyects\ Abel/
+ 1036  ls
+ 1037  cd key/
+ 1038  ls
+ 1039  cd ohio/
+ 1040  ls
+ 1041  cd ..
+ 1042  ls
+ 1043  cd ..
+ 1044  ls
+ 1045  cd events\ s3\ sns\ -\ serveless/
+ 1046  ls
+ 1047  cd /home/acorales/
+ 1048  ls
+ 1049  cd key-aws/
+ 1050  ssh -i "ccdemo-app.pem" root@ec2-3-137-172-57.us-east-2.compute.amazonaws.com
+ 1051  chmod 400 ccdemo-app.pem 
+ 1052  ssh -i "ccdemo-app.pem" root@ec2-3-137-172-57.us-east-2.compute.amazonaws.com
+ 1053  cd key-aws/
+ 1054  ls
+ 1055  ssh -i "http-apache.pem" ec2-user@ec2-3-142-36-199.us-east-2.compute.amazonaws.com
+ 1056  ssh -i "http-apache.pem" ec2-user@ec2-3-133-125-224.us-east-2.compute.amazonaws.com
+ 1057  ssh -i "http-apache.pem" ec2-user@ec2-3-142-36-199.us-east-2.compute.amazonaws.com
+ 1058  ssh -i "ccdemo-app.pem" ec2-user@ec2-3-137-172-57.us-east-2.compute.amazonaws.com
+ 1059  ssh -i "http-apache.pem" ec2-user@ec2-3-142-36-199.us-east-2.compute.amazonaws.com
+ 1060  history 
+ 1061  cd /home/acorales/
+ 1062  cd Desktop/
+ 1063  cd boto3/
+ 1064  ls
+ 1065  ls -ltra 
+ 1066  dos2unix *
+ 1067  ifconfig 
+ 1068  clear
+ 1069  cd key-aws/
+ 1070  ssh -i "http-apache.pem" ec2-user@ec2-3-144-224-85.us-east-2.compute.amazonaws.com
+ 1071  ls -ltra 
+ 1072  ssh -i "http-apache.pem" ec2-user@ec2-3-144-224-85.us-east-2.compute.amazonaws.com
+ 1073  ssh -i "http-apache.pem" ec2-user@ec2-3-144-224-85.us-east-2.compute.amazonaws.com
+ 1074  cd /home/acorales/Desktop/
+ 1075  ls
+ 1076  cd boto3/
+ 1077  ls
+ 1078  ls -ltra 
+ 1079  dos2unix create_iam_user_access_key.py 
+ 1080  exit
+ 1081  cd Desktop/
+ 1082  cd boto3/
+ 1083  ls
+ 1084  cd lambda/
+ 1085  sudo su
+ 1086  history 
+ 1087  ls
+ 1088  dos2unix snap_bw_regions.py 
+ 1089  cd ..
+ 1090  ls
+ 1091  cd ..
+ 1092  ls
+ 1093  cd Pasaje/
+ 1094  cd ..
+ 1095  cd key-aws/
+ 1096  ssh -i "http-apache.pem" ec2-user@ec2-13-59-217-63.us-east-2.compute.amazonaws.com
+ 1097  sudo su 
+ 1098  cd Desktop/
+ 1099  cd boto3/
+ 1100  ls
+ 1101  mv get_all_user_aim.py lambda/
+ 1102  cd lambda/
+ 1103  dos2unix get_all_user_aim.py 
+ 1104  cd
+ 1105  cd key-aws/
+ 1106  ssh -i "http-apache.pem" ec2-user@ec2-18-117-98-114.us-east-2.compute.amazonaws.com
+ 1107  cd key-aws/
+ 1108  ssh -i "http-apache.pem" ec2-user@ec2-18-119-139-199.us-east-2.compute.amazonaws.com
+ 1109  sudo su 
+ 1110  cd Desktop/boto3/lambda/
+ 1111  dos2unix failover.py 
+ 1112  rdesktop 192.168.0.16
+ 1113  nmap 192.168.0.16
+ 1114  ping 192.168.0.16
+ 1115  sudo pip install cfn-lint
+ 1116  sudo pip3 install --user aws-sam-cli
+ 1117  sam --version
+ 1118  sam -version
+ 1119  sudo pip install cfn-lint
+ 1120  sudo pip install pydot
+ 1121  sudo su
+ 1122  lsb_release 
+ 1123  sudo su
+ 1124  nslookup macmillaneducationeverywhere
+ 1125  nslookup www.macmillaneducationeverywhere
+ 1126  nslookup https://www.macmillaneducationeverywhere
+ 1127  nslookup https://www.macmillaneducationeverywhere.com
+ 1128  nslookup www.macmillaneducationeverywhere.com
+ 1129  traceroute 54.194.38.16
+ 1130  apt install traceroute 
+ 1131  sudo apt install traceroute 
+ 1132  sudo apt install inetutils-traceroute
+ 1133  traceroute 54.194.38.16
+ 1134  clear
+ 1135  sudo su
+ 1136  sudo su
+ 1137  aws configure
+ 1138  ls -ha
+ 1139  ls -lha 
+ 1140  cd firts-instance/
+ 1141  terraform init
+ 1142  terraform validate
+ 1143  terraform plan
+ 1144  terraform validate
+ 1145  terraform plan
+ 1146  cd firts-instance/
+ 1147  terraform plan
+ 1148  clear
+ 1149  terraform play
+ 1150  terraform apply
+ 1151  terraform show
+ 1152  terraform destroy
+ 1153  history 
+ 1154  awk {print $2} | history 
+ 1155  awk {print $1} | history 
+ 1156  history | awk {print $2}
+ 1157  history > test
