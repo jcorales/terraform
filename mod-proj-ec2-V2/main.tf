@@ -40,7 +40,7 @@ module "ec2-2"    {
 		    sudo yum update -y
 		    sudo yum -y install httpd -y
 		    sudo service httpd start
-		    echo "Hello world from EC2 $(hostname -f)" > /var/www/html/index.html
+		    echo "Hello mundo cruel de EC2 $(hostname -f)" > /var/www/html/index.html
 		    EOF
     security_groups = [module.sg.sg_attachment-subnet1b]
     
@@ -58,7 +58,7 @@ module "ec2-3"    {
 		    sudo yum update -y
 		    sudo yum -y install httpd -y
 		    sudo service httpd start
-		    echo "Hello world from EC2 $(hostname -f)" > /var/www/html/index.html
+		    echo "Hello mundo cruel de EC2 $(hostname -f)" > /var/www/html/index.html
 		    EOF
     security_groups = [module.sg.sg_attachment-subnet1b]
 
