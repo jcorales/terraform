@@ -49,7 +49,7 @@ module "ec2-2"    {
 // ##### SUBEEEEEEE EL CODIGOOO A UN REPOOOOOOOOOOOOO, no puedo trabaaar en esta maquina , si lo subes es mas //  facil trabajar los doss , con el codigo versionado  en un repo ya te habria marcado que era lo que estaba mal en  el codigo  , ahora tenes un conflicto network_interface y security group ,seguramente tenes que agregar el security group dentro de la net
 module "ec2-3"    {
     source = "./ec2"
-    ec2type = "t2.micro"
+    ec2type = "t2.micro"    
     ec2iface = module.vpc.ec2_network_interface-3
     
     ec2name = "instance3"
