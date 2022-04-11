@@ -40,13 +40,12 @@ module "ec2-2"    {
 		    sudo yum update -y
 		    sudo yum -y install httpd -y
 		    sudo service httpd start
-		    echo "Hola mundo cruel C2 $(hostname -f)" > /var/www/html/index.html
+		    echo "Hola mundo cruel C2 V2 $(hostname -f)" > /var/www/html/index.html
 		    EOF
     security_groups = [module.sg.sg_attachment-subnet1b]
     
 }
 
-// ##### SUBEEEEEEE EL CODIGOOO A UN REPOOOOOOOOOOOOO, no puedo trabaaar en esta maquina , si lo subes es mas //  facil trabajar los doss , con el codigo versionado  en un repo ya te habria marcado que era lo que estaba mal en  el codigo  , ahora tenes un conflicto network_interface y security group ,seguramente tenes que agregar el security group dentro de la net
 module "ec2-3"    {
     source = "./ec2"
     ec2type = "t2.micro"    
@@ -58,7 +57,7 @@ module "ec2-3"    {
 		    sudo yum update -y
 		    sudo yum -y install httpd -y
 		    sudo service httpd start
-		    echo "Hello world from EC2 $(hostname -f)" > /var/www/html/index.html
+		    echo "Hello world from EC2 V2 $(hostname -f)" > /var/www/html/index.html
 		    EOF
     security_groups = [module.sg.sg_attachment-subnet1b]
 
