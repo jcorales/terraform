@@ -16,10 +16,10 @@ module "sg" {
 
 
 module "ec2"  {
-  depends_on = [
-    module.sg
-  ]
-  ###
+#  depends_on = [
+#    module.sg
+#  ]
+  
     source = "./ec2"
     ec2type = "t3.micro"
     ec2iface = module.vpc.ec2_network_interface
