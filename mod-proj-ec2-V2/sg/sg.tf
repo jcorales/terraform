@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg-ec2-http-https" {
-   name   = "rules-ingres"
+   name   = "rules-ec2"
 #   vpc_id = module.vpc.aws_security_group_vpc
 
    
@@ -28,7 +28,7 @@ resource "aws_security_group" "sg-ec2-http-https" {
    }   
 
    tags = {
-      Name = "rules-ingres-ec2"
+      Name = "rules-ec2"
    }
 }
 
