@@ -33,22 +33,27 @@ variable "user_data" {
   
 }
 
-variable "security_groups" {
-    type = list(string)
-    
-}
+#variable "security_groups" {
+#    type = list(string)
+#    
+#}
 
 
 
 resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
     instance_type = var.ec2type
+    network_interface {
+        network_interface_id = var.ec2iface
+        device_index = 0
+      
+    }
     tags = {
         Name = var.ec2name
     }
     ebs_optimized = var.ebs_opt
     user_data = var.user_data
-    vpc_security_group_ids = var.security_groups
+#    vpc_security_group_ids = var.security_groups
 }
 
 
