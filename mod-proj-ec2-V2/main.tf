@@ -19,8 +19,9 @@ module "ec2"  {
   depends_on = [
     module.sg
   ]
+  ###
     source = "./ec2"
-    ec2type = "t2.micro"
+    ec2type = "t3.micro"
     ec2iface = module.vpc.ec2_network_interface
     ec2name = "instance1"
     user_data = <<-EOF
