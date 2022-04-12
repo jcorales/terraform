@@ -1,5 +1,6 @@
 module "sg" {
     source = "../sg"
+    vpc_id = aws_vpc.vpc1.id
     
 }
 
@@ -103,7 +104,7 @@ resource "aws_network_interface" "iface1"{
 resource "aws_network_interface" "iface2"{
     subnet_id = aws_subnet.subnet1b.id
     private_ips = ["19.82.255.12"]
-    security_groups = [aws_security_group.allow_SSH_HTTP.id]
+    security_groups = [module.sg.web-app]
     tags = {
         Name = "subnet2-EC2-2" 
         
@@ -114,6 +115,7 @@ resource "aws_network_interface" "iface2"{
 resource "aws_network_interface" "iface3"{
     subnet_id = aws_subnet.subnet1b.id
     private_ips = ["19.82.255.13"]
+    security_groups = [module.sg.web-app]
     tags = {
         Name = "subnet2-EC2-3" 
     }

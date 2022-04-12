@@ -1,9 +1,20 @@
+variable "vpc_id" {
+   type = string
+  
+}
+
 resource "aws_security_group" "web-app" {
    name   = "web-app"
    description = "security_group"
-   #   vpc_id = module.vpc.aws_security_group_vpc
+   vpc_id = var.vpc_id
 
-   
+   ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
    ingress {
       description = "ingress_rule_2"
       from_port   = 80

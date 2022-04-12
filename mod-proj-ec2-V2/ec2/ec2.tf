@@ -51,7 +51,6 @@ resource "aws_instance" "ec2instance" {
     instance_type = var.ec2type
     key_name = var.key_name
     #security_groups = var.security_groups
-
     network_interface {
         network_interface_id = var.ec2iface
         device_index = 0
