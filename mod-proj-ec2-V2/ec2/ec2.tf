@@ -38,11 +38,20 @@ variable "user_data" {
 #    
 #}
 
+variable "key_name" {
+    description = "keys to connect EC2"
+    default = "ec2-apache-terraform"
+
+    
+}
 
 
 resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
     instance_type = var.ec2type
+    key_name = var.key_name
+    #security_groups = var.security_groups
+
     network_interface {
         network_interface_id = var.ec2iface
         device_index = 0
@@ -53,7 +62,7 @@ resource "aws_instance" "ec2instance" {
     }
     ebs_optimized = var.ebs_opt
     user_data = var.user_data
-#    vpc_security_group_ids = var.security_groups
+    
 }
 
 

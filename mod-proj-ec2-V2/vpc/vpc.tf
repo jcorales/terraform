@@ -1,3 +1,8 @@
+module "sg" {
+    source = "../sg"
+    
+}
+
 variable "vpcname" {
     type = string
 }
@@ -30,7 +35,36 @@ resource "aws_vpc" "vpc1" {
     }
 }
 
+resource "aws_security_group" "allow_SSH_HTTP" {
+  name        = "allow_SSH_HTTP"
+  description = "Allow TLS inbound traffic"
+  vpc_id      = aws_vpc.vpc1.id
 
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "allow_SSH_HTTP"
+  }
+}
 
 
 resource "aws_subnet" "subnet1a" {
@@ -58,6 +92,8 @@ resource "aws_subnet" "subnet1b" {
 resource "aws_network_interface" "iface1"{
     subnet_id = aws_subnet.subnet1a.id
     private_ips = ["19.82.2.11"]
+    #security_groups = ["module.sg.web-app.id"]
+    security_groups = [aws_security_group.allow_SSH_HTTP.id]
     tags = {
         Name = "subnet1-EC2" 
     }
@@ -67,6 +103,7 @@ resource "aws_network_interface" "iface1"{
 resource "aws_network_interface" "iface2"{
     subnet_id = aws_subnet.subnet1b.id
     private_ips = ["19.82.255.12"]
+    security_groups = [aws_security_group.allow_SSH_HTTP.id]
     tags = {
         Name = "subnet2-EC2-2" 
         

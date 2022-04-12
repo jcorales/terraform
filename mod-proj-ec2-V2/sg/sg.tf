@@ -1,6 +1,7 @@
-resource "aws_security_group" "sg-ec2-http-https" {
-   name   = "rules-ec2"
-#   vpc_id = module.vpc.aws_security_group_vpc
+resource "aws_security_group" "web-app" {
+   name   = "web-app"
+   description = "security_group"
+   #   vpc_id = module.vpc.aws_security_group_vpc
 
    
    ingress {
@@ -28,13 +29,13 @@ resource "aws_security_group" "sg-ec2-http-https" {
    }   
 
    tags = {
-      Name = "rules-ec2"
+      Name = "web-app"
    }
 }
 
 
-output "sg_attachment-subnet1b" {
-    value = aws_security_group.sg-ec2-http-https.id
+output "web-app" {
+    value = aws_security_group.web-app.id
 }
 
 
