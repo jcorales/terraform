@@ -3,3 +3,4 @@
 *.tfstate.*
 *.terraform.lock.hcl
 command-terraform
+ec2-apache-terraform.pem

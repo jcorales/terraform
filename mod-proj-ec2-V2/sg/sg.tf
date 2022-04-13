@@ -3,6 +3,28 @@ variable "vpc_id" {
   
 }
 
+###intance 1 subnet 1a
+resource "aws_security_group" "ssh" {
+  name        = "SSH"
+  description = "SSH"
+  vpc_id      = var.vpc_id
+
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  
+  tags = {
+    Name = "SSH"
+  }
+}
+
+
+
+##intances 2 y 3 subnet 1b
 resource "aws_security_group" "web-app" {
    name   = "web-app"
    description = "security_group"
@@ -45,8 +67,15 @@ resource "aws_security_group" "web-app" {
 }
 
 
+##
+
 output "web-app" {
     value = aws_security_group.web-app.id
+}
+
+
+output "ssh" {
+    value = aws_security_group.ssh.id
 }
 
 

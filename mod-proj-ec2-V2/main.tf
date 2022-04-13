@@ -9,21 +9,10 @@ module "vpc" {
     
 }
 
-#module "sg" {
-#    source = "./sg"
-#    
-#}
-
-
 module "ec2"  {
-#  depends_on = [
-#    module.sg
-#  ]
-  ###
     source = "./ec2"
     ec2type = "t3.micro"
     ec2iface = module.vpc.ec2_network_interface
-    #security_groups = ["module.sg.web-app.id"]
     ec2name = "instance1"
     user_data = <<-EOF
 	        #!/bin/bash
@@ -36,7 +25,6 @@ module "ec2-2"    {
     source = "./ec2"
     ec2type = "t2.micro"
     ec2iface = module.vpc.ec2_network_interface-2
-    #security_groups = ["module.sg.aws_security_group.web-app"]
     ec2name = "instance2"
     user_data = <<-EOF
 	        #!/bin/bash
@@ -53,7 +41,6 @@ module "ec2-3"    {
     source = "./ec2"
     ec2type = "t2.micro"    
     ec2iface = module.vpc.ec2_network_interface-3
-    #security_groups = ["module.sg.aws_security_group.web-app"]
     ec2name = "instance3"
     user_data = <<-EOF
 	        #!/bin/bash

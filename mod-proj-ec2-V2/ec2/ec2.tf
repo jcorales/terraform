@@ -33,11 +33,6 @@ variable "user_data" {
   
 }
 
-#variable "security_groups" {
-#    type = list(string)
-#    
-#}
-
 variable "key_name" {
     description = "keys to connect EC2"
     default = "ec2-apache-terraform"
@@ -50,7 +45,6 @@ resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
     instance_type = var.ec2type
     key_name = var.key_name
-    #security_groups = var.security_groups
     network_interface {
         network_interface_id = var.ec2iface
         device_index = 0
@@ -64,6 +58,10 @@ resource "aws_instance" "ec2instance" {
     
 }
 
+resource "aws_eip" "public_ip" {
+  instance = aws_instance.ec2instance.id
+  vpc      = true
+}
 
 
 
