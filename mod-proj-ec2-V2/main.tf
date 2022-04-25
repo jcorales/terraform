@@ -23,7 +23,7 @@ module "ec2"  {
     source = "./ec2"
     ec2type = "t3.small"
     ec2iface = module.vpc.ec2_network_interface
-    ec2name = "instance1"
+    ec2name = "instance2"
     user_data = <<-EOF
 	        #!/bin/bash
             cd /home/ec2-user
