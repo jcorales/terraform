@@ -14,6 +14,7 @@ provider "aws" {
 
 
 locals {
+    ##map
     tags = { 
     "env" = "dev"
     "team" = "admin"
@@ -23,7 +24,12 @@ locals {
     "type_intance" = "t3.micro"
     "ami" = "ami-0c02fb55956c7d316"
     }
+    ##boleano
+    ebs_opt = true  
+      
+  
 }
+
 
 
 
@@ -42,6 +48,7 @@ module "ec2"  {
     ec2ami = local.instance.ami
     ec2type = local.instance.type_intance
     ec2iface = module.vpc.ec2_network_interface
+    ebs_opt = local.ebs_opt
     tags = local.tags
     user_data = <<-EOF
 	        #!/bin/bash
