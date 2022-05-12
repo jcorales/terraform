@@ -13,12 +13,6 @@ variable "ec2iface" {
 }
 
 
-#variable "ec2name" {
-#    type = string
-#    
-#
-#}
-
 variable "ebs_opt" {
     type = bool
     default = false
