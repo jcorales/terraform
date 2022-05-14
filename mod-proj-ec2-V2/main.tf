@@ -16,18 +16,24 @@ provider "aws" {
 locals {
     ##map
     tags = { 
-    "env" = "dev"
+    "env" = "cert"
     "team" = "admin"
     "app" = "tarjetas"
     }
     instance = {
-    "type_intance" = "t3.micro"
     "ami" = "ami-0c02fb55956c7d316"
     }
+    ##Operador condicional (ternario)
+    type_intance = true
+
+
+    #string
+    key_name = "ec2-apache-terraform"    
+    
     ##boleano
-    ebs_opt = true  
-      
-  
+    ebs_opt = true
+    monitoring = true      
+    
 }
 
 
@@ -46,9 +52,11 @@ module "ec2"  {
     source = "./ec2"
     #ec2type = local.tags["type_intance"]
     ec2ami = local.instance.ami
-    ec2type = local.instance.type_intance
+    ec2type = local.type_intance
     ec2iface = module.vpc.ec2_network_interface
     ebs_opt = local.ebs_opt
+    key_name = local.key_name
+    monitoring = local.monitoring
     tags = local.tags
     user_data = <<-EOF
 	        #!/bin/bash

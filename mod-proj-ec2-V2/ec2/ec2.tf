@@ -20,6 +20,14 @@ variable "ebs_opt" {
   
 }
 
+variable "monitoring" {
+    type = bool
+    default = false
+  
+}
+
+
+
 variable "user_data" {
     type = string
     
@@ -28,8 +36,7 @@ variable "user_data" {
 
 variable "key_name" {
     description = "keys to connect EC2"
-    default = "ec2-apache-terraform"
-
+    type = string
     
 }
 
@@ -48,7 +55,7 @@ locals {
 
 resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
-    instance_type = var.ec2type
+    instance_type = var.tags.env == "dev" ? "t2.micro" : ( var.tags.env == "cert" ? "t2.small" : ( "t3.micro"  ))
     key_name = var.key_name
     network_interface {
         network_interface_id = var.ec2iface
@@ -59,6 +66,9 @@ resource "aws_instance" "ec2instance" {
 
     ebs_optimized = var.ebs_opt
     user_data = var.user_data
+    monitoring = true
+    
+
     
 }
 
