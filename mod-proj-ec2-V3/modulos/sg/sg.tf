@@ -1,20 +1,33 @@
+variable "vpc_name" {
+   type = string
+  
+}
 variable "vpc_id" {
    type = string
   
 }
 
+data "aws_vpc" "default" {
+  filter {
+    name   = "tag:Name"
+    values = [var.vpc_name]
+  }
+}
+
+
+
 ###intance 1 subnet 1a
 resource "aws_security_group" "ssh" {
   name        = "SSH"
   description = "SSH"
-  vpc_id      = var.vpc_id
+  vpc_id      = data.aws_vpc.default.id
 
   ingress {
     description = "SSH"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [data.aws_vpc.default.cidr_block]
   }
   
   tags = {
@@ -69,12 +82,12 @@ resource "aws_security_group" "web-app" {
 
 ##
 
-output "web-app" {
+output "web-id" {
     value = aws_security_group.web-app.id
 }
 
 
-output "ssh" {
+output "ssh-id" {
     value = aws_security_group.ssh.id
 }
 

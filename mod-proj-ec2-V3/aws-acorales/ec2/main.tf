@@ -1,4 +1,3 @@
-
 terraform {
   backend "s3" {
     bucket = "acorales-terraform"
@@ -11,12 +10,22 @@ provider "aws" {
     region = "us-east-1"
 }
 
+###state remote from VPC
+data "terraform_remote_state" "vpc" {
+  backend = "s3"
+
+  config = {
+    bucket = "acorales-terraform"
+    key    = "infra/mod-proj-vpc-V3.tfstate"
+    region = "us-east-1"
+  }
+}
 
 
 locals {
     ##map
     tags = { 
-    "env" = "cert"
+    "env" = "prod"
     "team" = "admin"
     "app" = "tarjetas"
     }
@@ -32,9 +41,25 @@ locals {
     subnet_id = "subnet-08483c74a3fbc9902"
         
     ##boleano
-    #ebs_optimized = true
+    ebs_optimized = true
     monitoring = true      
     
+}
+
+
+/* ###
+module "sg" {
+    source = "../../modulos/sg"
+    vpc_name = "vpc_module1-V3"
+  
+}
+*/
+
+module "sg" {
+    source = "../../modulos/sg"
+    vpc_name = "vpc_module1-V3"
+    vpc_id = data.terraform_remote_state.vpc.outputs.vpc.vpc
+  
 }
 
 
@@ -44,7 +69,8 @@ module "ec2"  {
     ec2ami = local.instance.ami
     ec2type = local.type_intance
     subnet_id = local.subnet_id
-    #ebs_opt = local.ebs_optimized
+    vpc_security_group_ids = [module.sg.web-id,module.sg.ssh-id]
+    ebs_optimized = local.ebs_optimized
     key_name = local.key_name
     monitoring = local.monitoring
     tags = local.tags
@@ -56,3 +82,7 @@ module "ec2"  {
     
 }
 
+
+output "vpc" {
+  value = data.terraform_remote_state.vpc.outputs.vpc.vpc
+}

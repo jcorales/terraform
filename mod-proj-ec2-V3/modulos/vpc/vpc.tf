@@ -71,3 +71,7 @@ resource "aws_subnet" "subnet1b" {
       
 }
 
+output "vpc" {
+    value = aws_vpc.vpc1.id
+  
+}

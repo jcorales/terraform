@@ -13,19 +13,19 @@ variable "subnet_id" {
 }
 
 
-variable "ebs_opt" {
+variable "ebs_optimized" {
     type = bool
     default = false
   
 }
 
-/*
+
 variable "vpc_security_group_ids" {
-    type = string
+    type = list(string)
     #default = "sg-0c24c6da530e20da4"
   
 }
-*/
+
 
 
 variable "monitoring" {
@@ -61,58 +61,16 @@ locals {
 
 
 
-resource "aws_security_group" "web-app" {
-   name   = "web-app"
-   description = "security_group"
-   vpc_id = "vpc-019154fa13a46bc91"
-
-   ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-   ingress {
-      description = "ingress_rule_2"
-      from_port   = 80
-      to_port     = 80
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-   }
-
-   egress {
-      description = "ingress_rule_3"
-      from_port   = 443
-      to_port     = 443
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-   }
-   
-   egress {
-      description = "ingress_rule_4"
-      from_port   = 80
-      to_port     = 80
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-   }   
-
-   tags = {
-      Name = "web-app"
-   }
-}
-
-
 resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
     instance_type = var.tags.env == "dev" ? "t2.micro" : ( var.tags.env == "cert" ? "t2.small" : ( "t3.micro"  ))
     key_name = var.key_name
     subnet_id = var.subnet_id
     tags = merge(var.tags,local.tagname)
-    vpc_security_group_ids = [aws_security_group.web-app.id]
+    vpc_security_group_ids = var.vpc_security_group_ids
     monitoring = true
     user_data = var.user_data
-    ebs_optimized = var.ebs_opt
+    ebs_optimized = var.ebs_optimized
     
     
 }
