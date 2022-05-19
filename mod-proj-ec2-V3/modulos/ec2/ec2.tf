@@ -7,25 +7,32 @@ variable "ec2type" {
 
 }
 
-variable "ec2iface" {
+variable "subnet_id" {
     type = string
 
 }
 
 
-
-variable "ebs_opt" {
+variable "ebs_optimized" {
     type = bool
     default = false
   
 }
+
+
+variable "vpc_security_group_ids" {
+    type = list(string)
+    #default = "sg-0c24c6da530e20da4"
+  
+}
+
+
 
 variable "monitoring" {
     type = bool
     default = false
   
 }
-
 
 
 variable "user_data" {
@@ -53,22 +60,18 @@ locals {
 }
 
 
+
 resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
     instance_type = var.tags.env == "dev" ? "t2.micro" : ( var.tags.env == "cert" ? "t2.small" : ( "t3.micro"  ))
     key_name = var.key_name
-    network_interface {
-        network_interface_id = var.ec2iface
-        device_index = 0
-
-    }
+    subnet_id = var.subnet_id
     tags = merge(var.tags,local.tagname)
-
-    ebs_optimized = var.ebs_opt
-    user_data = var.user_data
+    vpc_security_group_ids = var.vpc_security_group_ids
     monitoring = true
+    user_data = var.user_data
+    ebs_optimized = var.ebs_optimized
     
-
     
 }
 
