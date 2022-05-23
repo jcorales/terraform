@@ -14,6 +14,18 @@ module "vpc" {
 }
 
 output "vpc" {
-    value = module.vpc
+    value = module.vpc.vpc
   
 }
+
+output "subnet" {
+    value = module.vpc.subnet_1a
+  
+}
+
+/*
+output "subnet" {
+    value = module.vpc.subnet_1b
+  
+}
+*/

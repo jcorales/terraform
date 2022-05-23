@@ -71,7 +71,20 @@ resource "aws_subnet" "subnet1b" {
       
 }
 
+
 output "vpc" {
-    value = aws_vpc.vpc1.id
+    value = aws_vpc.vpc1
   
 }
+
+output "subnet_1a" {
+    value = aws_subnet.subnet1a
+  
+}
+
+/*
+output "subnet_1b" {
+    value = aws_subnet.subnet1b
+  
+}
+*/
