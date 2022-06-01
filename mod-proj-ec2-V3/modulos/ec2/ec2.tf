@@ -57,9 +57,10 @@ variable "tags" {
   
 }
 
-variable "instance_tag" {
-    type = string
-    default = "prod"
+variable "count_ec2" {
+    type = number
+    default = 4
+    
     
   
 }
@@ -78,10 +79,9 @@ resource "null_resource" "tags_name" {
 }
 */
 
-locals {
-  foobar_default = local.tagname.Name == null ? "default value for foo.foobar" : local.tagname.Name
-}
-
+#locals {
+#  foobar_default = local.tagname.Name == null ? "default value for foo.foobar" : local.tagname.Name
+#}
 
 
 resource "aws_instance" "ec2instance" {
@@ -93,31 +93,38 @@ resource "aws_instance" "ec2instance" {
     monitoring = true
     user_data = var.user_data
     ebs_optimized = var.ebs_optimized
-    count = 2
-    tags = {
-      Name = local.foobar_default
+    count = var.count_ec2
     
-    }  
-    
+    tags = merge(
+        var.tags,local.tagname,
+        {
+          Name = "${local.tagname.Name}-${count.index}"
+                 
+    },
+    )  
+    #tags = "${merge(var.tags,local.tagname)}"
 }
 
 
 
 
 
-#resource "aws_eip" "public_ip" {
-#  instance = aws_instance.ec2instance[*].id
-#  vpc      = true
-#}
 
+resource "aws_eip" "public_ip" {
+  count = var.count_ec2  
+  instance = aws_instance.ec2instance[count.index].id
+  vpc      = true
+}
 
 
 
 # EC2 Instance Public DNS
-#output "instance_publicdns" {
-#  description = "EC2 Instance Public DNS"
-#  value = aws_instance.ec2instance.public_dns
-#}
+output "instance_publicdns" {
+  description = "EC2 Instance Public DNS"
+  #count = var.count_ec2 
+  #value = aws_instance.ec2instance.public_dns[*]
+  value = aws_instance.ec2instance.*.public_dns
+}
 
 
 output "test" {
