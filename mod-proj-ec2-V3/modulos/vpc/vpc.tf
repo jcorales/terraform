@@ -50,6 +50,16 @@ resource "aws_default_route_table" "route_ig" {
   }
 }
 
+
+# Availability Zones Datasource
+data "aws_availability_zones" "my_azones" {
+  filter {
+    name   = "opt-in-status"
+    values = ["opt-in-not-required"]
+  }
+}
+
+
 resource "aws_subnet" "subnet1a" {
     vpc_id = aws_vpc.vpc1.id
     availability_zone = var.az[0]
@@ -82,9 +92,10 @@ output "subnet_1a" {
   
 }
 
-/*
-output "subnet_1b" {
-    value = aws_subnet.subnet1b
+
+
+
+output "aws_availability_zones" {
+    value = data.aws_availability_zones.my_azones.names
   
 }
-*/

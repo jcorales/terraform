@@ -7,14 +7,10 @@ variable "ec2type" {
 
 }
 
-
-
-
 variable "subnet_id" {
     type = string
 
 }
-
 
 variable "ebs_optimized" {
     type = bool
@@ -22,14 +18,11 @@ variable "ebs_optimized" {
   
 }
 
-
 variable "vpc_security_group_ids" {
     type = list(string)
     #default = "sg-0c24c6da530e20da4"
   
 }
-
-
 
 variable "monitoring" {
     type = bool
@@ -41,7 +34,7 @@ variable "monitoring" {
 variable "user_data" {
     type = string
     
-  
+ 
 }
 
 variable "key_name" {
@@ -71,6 +64,14 @@ locals {
     }
 }
 
+# Availability Zones Datasource
+data "aws_availability_zones" "my_azones" {
+  filter {
+    name   = "opt-in-status"
+    values = ["opt-in-not-required"]
+  }
+}
+
 /*
 resource "null_resource" "tags_name" {
   triggers = {
@@ -88,17 +89,19 @@ resource "aws_instance" "ec2instance" {
     ami = var.ec2ami
     instance_type = var.tags.env == "dev" ? "t2.micro" : ( var.tags.env == "cert" ? "t2.small" : ( "t3.micro"  ))
     key_name = var.key_name
-    subnet_id = var.subnet_id
-    vpc_security_group_ids = var.vpc_security_group_ids
+    #subnet_id = var.subnet_id
+    #vpc_security_group_ids = var.vpc_security_group_ids
     monitoring = true
     user_data = var.user_data
     ebs_optimized = var.ebs_optimized
-    count = var.count_ec2
-    
+    #count = var.count_ec2
+    for_each = toset(data.aws_availability_zones.my_azones.names)
+    availability_zone = each.key    
     tags = merge(
         var.tags,local.tagname,
         {
-          Name = "${local.tagname.Name}-${count.index}"
+          #Name = "${local.tagname.Name}-${count.index}"
+          Name = "${local.tagname.Name}-${each.value}"
                  
     },
     )  
@@ -108,7 +111,7 @@ resource "aws_instance" "ec2instance" {
 
 
 
-
+/*
 
 resource "aws_eip" "public_ip" {
   count = var.count_ec2  
@@ -116,8 +119,18 @@ resource "aws_eip" "public_ip" {
   vpc      = true
 }
 
+*/
 
+# EC2 Instance Public IP with TOSET
+output "instance_publicip" {
+  description = "EC2 Instance Public IP"
+  #value = aws_instance.myec2vm.*.public_ip   # Legacy Splat
+  #value = aws_instance.myec2vm[*].public_ip  # Latest Splat
+  value = toset([for instance in aws_instance.ec2instance: instance.public_ip])
+}
 
+/*
+# Output Legacy Splat Operator (Legacy) - Returns the List
 # EC2 Instance Public DNS
 output "instance_publicdns" {
   description = "EC2 Instance Public DNS"
@@ -125,6 +138,34 @@ output "instance_publicdns" {
   #value = aws_instance.ec2instance.public_dns[*]
   value = aws_instance.ec2instance.*.public_dns
 }
+*/
+
+/*
+# Output Legacy Generelize Splat Operator (Legacy) - Returns the List
+# EC2 Instance Public DNS
+output "instance_publicdns" {
+  description = "EC2 Instance Public DNS"
+  #count = var.count_ec2 
+  #value = aws_instance.ec2instance.public_dns[*]
+  value = aws_instance.ec2instance[*].public_dns
+}
+
+*/
+
+
+# EC2 Instance Public DNS with TOSET
+output "instance_publicdns" {
+  description = "EC2 Instance Public DNS"
+  #value = aws_instance.myec2vm[*].public_dns  # Legacy Splat
+  #value = aws_instance.myec2vm[*].public_dns  # Latest Splat
+  value = toset([for instance in aws_instance.ec2instance: instance.public_dns])
+}
+
+# EC2 Instance Public DNS with TOMAP
+output "instance_publicdns2" {
+  value = tomap({for az, instance in aws_instance.ec2instance: az => instance.public_dns})
+}
+
 
 
 output "test" {

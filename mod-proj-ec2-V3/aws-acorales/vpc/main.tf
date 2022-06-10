@@ -23,9 +23,8 @@ output "subnet" {
   
 }
 
-/*
-output "subnet" {
-    value = module.vpc.subnet_1b
+
+output "availability_zone" {
+    value = module.vpc.aws_availability_zones
   
 }
-*/
