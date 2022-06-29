@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 ###state remote from VPC
-data "terraform_remote_state" "vpc" {
+data "terraform_remote_state" "networking" {
   backend = "s3"
 
   config = {
@@ -24,7 +24,8 @@ data "terraform_remote_state" "vpc" {
 
 locals {
     ##map
-    tags = { 
+    tags = {
+      ##put prod, cert or dev## 
     "env" = "prod"
     "team" = "admin"
     "app" = "tarjetas"
@@ -38,7 +39,7 @@ locals {
 
     #string
     key_name = "ec2-apache-terraform"
-    subnet_id = "subnet-08483c74a3fbc9902"
+    subnet_id = data.terraform_remote_state.networking.outputs.subnet.id
         
     ##boleano
     ebs_optimized = true
@@ -58,9 +59,11 @@ module "sg" {
 module "sg" {
     source = "../../modulos/sg"
     vpc_name = "vpc_module1-V3"
-    vpc_id = data.terraform_remote_state.vpc.outputs.vpc.vpc
+    vpc_id = data.terraform_remote_state.networking.outputs.vpc.id
+    #vpc_id = "vpc-0d4ded125a43f2358"
   
 }
+
 
 
 module "ec2"  {
@@ -73,16 +76,31 @@ module "ec2"  {
     ebs_optimized = local.ebs_optimized
     key_name = local.key_name
     monitoring = local.monitoring
+    #count = 2
     tags = local.tags
+    /*
     user_data = <<-EOF
 	        #!/bin/bash
             cd /home/ec2-user
 		    echo "Hola mundo cruel" > hola.txt
 		    EOF
+    */    
+    user_data = file("${path.module}/app1-install.sh")
+    /*count = 2
+    tags = {
+      "Name" = "local.tags-${count.index}"
+*/
     
 }
 
-
 output "vpc" {
-  value = data.terraform_remote_state.vpc.outputs.vpc.vpc
+  value = data.terraform_remote_state.networking.outputs.vpc.id
+}
+
+
+
+
+output "subnet" {
+  value = data.terraform_remote_state.networking.outputs.subnet.id
+
 }

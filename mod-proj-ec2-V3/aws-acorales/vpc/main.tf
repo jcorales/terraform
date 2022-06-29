@@ -14,6 +14,17 @@ module "vpc" {
 }
 
 output "vpc" {
-    value = module.vpc
+    value = module.vpc.vpc
+  
+}
+
+output "subnet" {
+    value = module.vpc.subnet_1a
+  
+}
+
+
+output "availability_zone" {
+    value = module.vpc.aws_availability_zones
   
 }
