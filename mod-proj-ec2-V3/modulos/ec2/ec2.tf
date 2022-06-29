@@ -71,6 +71,15 @@ data "aws_availability_zones" "my_azones" {
     values = ["opt-in-not-required"]
   }
 }
+data "terraform_remote_state" "networking" {
+  backend = "s3"
+
+  config = {
+    bucket = "acorales-terraform"
+    key    = "infra/mod-proj-vpc-V3.tfstate"
+    region = "us-east-1"
+  }
+}
 
 /*
 resource "null_resource" "tags_name" {
@@ -95,7 +104,7 @@ resource "aws_instance" "ec2instance" {
     user_data = var.user_data
     ebs_optimized = var.ebs_optimized
     #count = var.count_ec2
-    for_each = toset(data.aws_availability_zones.my_azones.names)
+    for_each = toset(data.terraform_remote_state.networking.outputs.availability_zone)
     availability_zone = each.key    
     tags = merge(
         var.tags,local.tagname,
